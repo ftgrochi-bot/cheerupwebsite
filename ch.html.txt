@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Someone Special ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #FCE4EC;
+            --lavender: #F3E5F5;
+            --cream: #FFF9F0;
+            --accent: #BA68C8;
+            --text: #5D4037;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, var(--cream), var(--pink), var(--lavender));
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Hearts */
+        .heart {
+            position: fixed;
+            color: rgba(186, 104, 200, 0.3);
+            font-size: 20px;
+            pointer-events: none;
+            z-index: -1;
+            animation: float 6s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Layout */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 60px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            background: rgba(255, 255, 255, 0.4);
+            padding: 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Card Slider */
+        .section-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            color: var(--accent);
+        }
+
+        .slider-container {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .slider-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .compliment-text {
+            font-size: 1.3rem;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        /* Smile Button Section */
+        .smile-box {
+            margin: 50px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 25px;
+        }
+
+        .magic-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(186, 104, 200, 0.4);
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+        }
+
+        .magic-btn:hover {
+            transform: scale(1.05);
+            background: #ab47bc;
+        }
+
+        #smile-display {
+            margin-top: 25px;
+            min-height: 60px;
+            font-size: 1.1rem;
+            animation: fadeIn 0.5s;
+        }
+
+        /* Virtual Hug */
+        .hug-section {
+            padding: 40px;
+            background: white;
+            border-radius: 25px;
+            margin: 40px 0;
+        }
+
+        .hug-icon {
+            font-size: 50px;
+            animation: pulse 2s infinite;
+            display: inline-block;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* Playlist */
+        .playlist-card {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 20px;
+            text-align: left;
+        }
+
+        .song-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .song-icon { margin-right: 15px; color: var(--accent); }
+
+        /* Final Note */
+        footer {
+            margin-top: 80px;
+            padding: 40px;
+            font-style: italic;
+            border-top: 1px solid rgba(186, 104, 200, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>For You...</h1>
+            <p class="intro-text">
+                Hey, I don't know what's making you sad today, but I hope this little corner of the internet brings a smile to your face. ✨
+            </p>
+        </header>
+
+        <section>
+            <h2 class="section-title">Reasons Why You're Amazing</h2>
+            <div class="slider-container" id="slider">
+                <p class="compliment-text" id="compliment-text">You have a heart of gold that lights up any room you walk into.</p>
+            </div>
+        </section>
+
+        <section class="smile-box">
+            <h2 class="section-title">Need a tiny boost?</h2>
+            <button class="magic-btn" onclick="generateSmile()">Click for a Smile</button>
+            <div id="smile-display">Press the button to see something sweet!</div>
+        </section>
+
+        <section class="hug-section">
+            <div class="hug-icon">🫂</div>
+            <h2 class="section-title">Virtual Hug</h2>
+            <p>Close your eyes, take a deep breath, and hold this moment.</p>
+            <p><strong>You don't have to carry everything alone.</strong></p>
+        </section>
+
+        <section>
+            <h2 class="section-title">A Little Playlist for Your Soul</h2>
+            <div class="playlist-card">
+                <div class="song-item"><span class="song-icon">🎵</span> Sunflower - Post Malone (Uplifting Vibes)</div>
+                <div class="song-item"><span class="song-icon">🎵</span> Put Your Records On - Corinne Bailey Rae (Calm)</div>
+                <div class="song-item"><span class="song-icon">🎵</span> Vienna - Billy Joel (Reassuring)</div>
+                <div class="song-item"><span class="song-icon">🎵</span> Better Together - Jack Johnson (Sweet)</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>No pressure to smile right away. Just remember that you're important, appreciated, and someone is rooting for you.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Compliment Slider Logic
+        const compliments = [
+            "Your kindness is a gift to everyone who meets you.",
+            "You are incredibly resilient, even when you don't feel like it.",
+            "The world is a much better place because you're in it.",
+            "You have the most wonderful perspective on things.",
+            "Being around you feels like a warm cup of tea on a rainy day.",
+            "You are enough, exactly as you are right now.",
+            "Your laugh is genuinely my favorite sound."
+        ];
+
+        let compIndex = 0;
+        const compElement = document.getElementById('compliment-text');
+
+        function rotateCompliments() {
+            compElement.style.opacity = 0;
+            setTimeout(() => {
+                compIndex = (compIndex + 1) % compliments.length;
+                compElement.innerText = compliments[compIndex];
+                compElement.style.opacity = 1;
+            }, 500);
+        }
+        setInterval(rotateCompliments, 4000);
+
+        // Smile Generator Logic
+        const smileContent = [
+            "Joke: What do you call a bear with no teeth? A gummy bear! 🧸",
+            "Quote: 'Believe you can and you're halfway there.' - Theodore Roosevelt",
+            "Reminder: You've survived 100% of your hardest days so far. You're doing great.",
+            "Fact: Otters hold hands when they sleep so they don't drift apart. 🦦",
+            "Quote: 'You are braver than you believe, stronger than you seem, and smarter than you think.'",
+            "Joke: Why don't scientists trust atoms? Because they make up everything! ⚛️",
+            "Message: Sending you a giant cup of virtual coffee and a huge hug. ☕"
+        ];
+
+        function generateSmile() {
+            const display = document.getElementById('smile-display');
+            const random = smileContent[Math.floor(Math.random() * smileContent.length)];
+            display.style.opacity = 0;
+            setTimeout(() => {
+                display.innerText = random;
+                display.style.opacity = 1;
+            }, 200);
+        }
+
+        // Floating Hearts Logic
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
